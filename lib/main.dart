@@ -28,8 +28,8 @@ class _MyHomePageState extends State<MyHomePage> {
   String num1=" ";
   String num2="0";
   String Operater=" ";
-  String ShowVal=" ";
-  String result=" ";
+  String ShowVal="0";
+  double result = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,8 +47,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 FloatingActionButton(
                   onPressed: () {
                     setState(() {
-                      num1 += "7";
-                      ShowVal = num1;
+                      if (Operater.isEmpty){
+                        num1 += "7";
+                        ShowVal = num1;
+                      } else {
+                        num2 += "7";
+                        ShowVal = num2;
+                      }
                     });
                   },
                   child: const Text(
@@ -58,10 +63,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(width: 20),
                 FloatingActionButton(
-                   onPressed: () {
+                    onPressed: () {
                     setState(() {
-                      num1 += "8";
-                      ShowVal = num1;
+                      if (Operater.isEmpty){
+                        num1 += "8";
+                        ShowVal = num1;
+                      } else {
+                        num2 += "8";
+                        ShowVal = num2;
+                      }
                     });
                   },
                   child: const Text(
@@ -71,10 +81,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(width: 20),
                 FloatingActionButton(
-                  onPressed: () {
+                   onPressed: () {
                     setState(() {
-                      num1 += "9";
-                      ShowVal = num1;
+                      if (Operater.isEmpty){
+                        num1 += "9";
+                        ShowVal = num1;
+                      } else {
+                        num2 += "9";
+                        ShowVal = num2;
+                      }
                     });
                   },
                   child: const Text(
@@ -84,7 +99,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(width: 20),
                 FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Operater = "+";
+                  },
                   child: const Text(
                     "+",
                     style: TextStyle(fontSize: 30),
@@ -97,10 +114,15 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FloatingActionButton(
-                  onPressed: () {
+                   onPressed: () {
                     setState(() {
-                      num1 += "4";
-                      ShowVal = num1;
+                      if (Operater.isEmpty){
+                        num1 += "4";
+                        ShowVal = num1;
+                      } else {
+                        num2 += "4";
+                        ShowVal = num2;
+                      }
                     });
                   },
                   child: const Text(
@@ -110,10 +132,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(width: 20),
                 FloatingActionButton(
-                  onPressed: () {
+                   onPressed: () {
                     setState(() {
-                      num1 += "5";
-                      ShowVal = num1;
+                      if (Operater.isEmpty){
+                        num1 += "5";
+                        ShowVal = num1;
+                      } else {
+                        num2 += "5";
+                        ShowVal = num2;
+                      }
                     });
                   },
                   child: const Text(
@@ -123,10 +150,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(width: 20),
                 FloatingActionButton(
-                  onPressed: () {
+                   onPressed: () {
                     setState(() {
-                      num1 += "6";
-                      ShowVal = num1;
+                      if (Operater.isEmpty){
+                        num1 += "6";
+                        ShowVal = num1;
+                      } else {
+                        num2 += "6";
+                        ShowVal = num2;
+                      }
                     });
                   },
                   child: const Text(
@@ -136,7 +168,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(width: 20),
                 FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Operater = "-";
+                  },
                   child: const Text(
                     "-",
                     style: TextStyle(fontSize: 30),
@@ -149,10 +183,15 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FloatingActionButton(
-                  onPressed: () {
+                   onPressed: () {
                     setState(() {
-                      num1 += "1";
-                      ShowVal = num1;
+                      if (Operater.isEmpty){
+                        num1 += "1";
+                        ShowVal = num1;
+                      } else {
+                        num2 += "1";
+                        ShowVal = num2;
+                      }
                     });
                   },
                   child: const Text(
@@ -162,10 +201,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(width: 20),
                 FloatingActionButton(
-                  onPressed: () {
+                   onPressed: () {
                     setState(() {
-                      num1 += "2";
-                      ShowVal = num1;
+                      if (Operater.isEmpty){
+                        num1 += "2";
+                        ShowVal = num1;
+                      } else {
+                        num2 += "2";
+                        ShowVal = num2;
+                      }
                     });
                   },
                   child: const Text(
@@ -175,10 +219,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(width: 20),
                 FloatingActionButton(
-                  onPressed: () {
+                   onPressed: () {
                     setState(() {
-                      num1 += "3";
-                      ShowVal = num1;
+                      if (Operater.isEmpty){
+                        num1 += "3";
+                        ShowVal = num1;
+                      } else {
+                        num2 += "3";
+                        ShowVal = num2;
+                      }
                     });
                   },
                   child: const Text(
@@ -188,7 +237,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(width: 20),
                 FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Operater = "*";
+                  },
                   child: const Text(
                     "*",
                     style: TextStyle(fontSize: 30),
@@ -201,10 +252,15 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FloatingActionButton(
-                  onPressed: () {
+                   onPressed: () {
                     setState(() {
-                      num1 += "0";
-                      ShowVal = num1;
+                      if (Operater.isEmpty){
+                        num1 += "0";
+                        ShowVal = num1;
+                      } else {
+                        num2 += "0";
+                        ShowVal = num2;
+                      }
                     });
                   },
                   child: const Text(
@@ -217,6 +273,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     setState(() {
                       num1 += " ";
+                      num2 += " ";
+                      Operater = " ";
                       ShowVal = "0";
                     });
                   },
@@ -227,7 +285,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(width: 20),
                 FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                    if (num1 == " " || num2 == " " || Operater == " ")return;
+                    if (Operater == "+"){
+                      result = (double.parse(num1) + double.parse(num2));
+                    } else if (Operater == "-"){
+                      result = (double.parse(num1) - double.parse(num2));
+                    } else if (Operater == "*"){
+                      result = (double.parse(num1) * double.parse(num2));
+                    } else if (Operater == "/"){
+                      result = (double.parse(num1) / double.parse(num2));
+                    }
+                    ShowVal = result.toString();
+                    });
+                  },
                   child: const Text(
                     "=",
                     style: TextStyle(fontSize: 30),
@@ -235,7 +307,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 SizedBox(width: 20),
                 FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Operater = "/";
+                  },
                   child: const Text(
                     "/",
                     style: TextStyle(fontSize: 30),
